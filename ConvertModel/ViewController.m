@@ -32,8 +32,9 @@
 
 - (IBAction)convertModel:(id)sender
 {
-    [JFConvertModel convertSourceModel:self.serviceModel
-                         toTargetModel:self.viewModel];
+//    [JFConvertModel convertSourceModel:self.serviceModel
+//                         toTargetModel:self.viewModel];
+    [JFServiceModel printAllPropertiesAndValues];
 }
 
 #pragma mark - Accessors

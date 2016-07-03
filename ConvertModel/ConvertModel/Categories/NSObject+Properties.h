@@ -12,4 +12,6 @@
 
 + (NSSet *)propertyKeys;
 
++ (void)printAllPropertiesAndValues;
+
 @end

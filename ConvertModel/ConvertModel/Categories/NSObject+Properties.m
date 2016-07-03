@@ -44,4 +44,19 @@
     }
 }
 
++ (void)printAllPropertiesAndValues
+{
+    unsigned int outCount, i;
+    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    for (i = 0; i < outCount; i++) {
+        objc_property_t property = properties[i];
+        const char *propertyName = property_getName(property);
+        const char *propertyAttribute = property_getAttributes(property);
+        NSLog(@"propertyName: %@", @(propertyName));
+        NSLog(@"propertyAttribute: %@", @(propertyAttribute));
+        NSLog(@"----------------");
+    }
+    free(properties);
+}
+
 @end
